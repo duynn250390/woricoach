@@ -3,6 +3,7 @@ import Header from '../index/Header';
 import Footer from '../index/Footer';
 import { Link } from "react-router-dom";
 import MessageJSON from '../configs/message.json';
+import { switchCase } from '@babel/types';
 
 class Index extends Component {
     constructor(props) {
@@ -68,104 +69,82 @@ class Index extends Component {
         const navStep5 = document.querySelector('#step_5');
 
         const walkStep = step;
-        if (walkStep === this.state.step1) {
-            module_1.classList.add('active');
-            module_2.classList.remove('active');
-            module_3.classList.remove('active');
-            module_4.classList.remove('active');
-            module_5.classList.remove('active');
-
-            navStep1.classList.add('active');
-            navStep2.classList.remove('active');
-            navStep3.classList.remove('active');
-            navStep4.classList.remove('active');
-            navStep5.classList.remove('active');
-        }
-
-        if (walkStep === this.state.step2) {
-            this.validationFormStep1();
-            if (this.validationFormStep1() === true) {
-                module_1.classList.remove('active');
-                module_2.classList.add('active');
+        console.log(step);
+        switch (step) {
+            case this.state.step1:
+                module_1.classList.add('active');
+                module_2.classList.remove('active');
                 module_3.classList.remove('active');
                 module_4.classList.remove('active');
                 module_5.classList.remove('active');
 
                 navStep1.classList.add('active');
-                navStep2.classList.add('active');
+                navStep2.classList.remove('active');
                 navStep3.classList.remove('active');
                 navStep4.classList.remove('active');
                 navStep5.classList.remove('active');
-            }
+                break;
+            case this.state.step2:
+                if (this.validationFormStep1() === true) {
+                    module_1.classList.remove('active');
+                    module_2.classList.add('active');
+                    module_3.classList.remove('active');
+                    module_4.classList.remove('active');
+                    module_5.classList.remove('active');
+
+                    navStep1.classList.add('active');
+                    navStep2.classList.add('active');
+                    navStep3.classList.remove('active');
+                    navStep4.classList.remove('active');
+                    navStep5.classList.remove('active');
+                }
+                break;
+            case this.state.step3:
+                if (this.validationFormStep2() === true) {
+                    module_1.classList.remove('active');
+                    module_2.classList.remove('active');
+                    module_3.classList.add('active');
+                    module_4.classList.remove('active');
+                    module_5.classList.remove('active');
+
+                    navStep1.classList.add('active');
+                    navStep2.classList.add('active');
+                    navStep3.classList.add('active');
+                    navStep4.classList.remove('active');
+                    navStep5.classList.remove('active');
+                }
+                break;
+            case this.state.step4:
+                if (this.validationFormStep3() === true) {
+                    module_1.classList.remove('active');
+                    module_2.classList.remove('active');
+                    module_3.classList.remove('active');
+                    module_4.classList.add('active');
+                    module_5.classList.remove('active');
+
+                    navStep1.classList.add('active');
+                    navStep2.classList.add('active');
+                    navStep3.classList.add('active');
+                    navStep4.classList.add('active');
+                    navStep5.classList.remove('active');
+                }
+                break;
+            case this.state.step5:
+                if (this.validationFormStep4() === true) {
+                    module_1.classList.remove('active');
+                    module_2.classList.remove('active');
+                    module_3.classList.remove('active');
+                    module_4.classList.remove('active');
+                    module_5.classList.add('active');
+
+                    navStep1.classList.add('active');
+                    navStep2.classList.add('active');
+                    navStep3.classList.add('active');
+                    navStep4.classList.add('active');
+                    navStep5.classList.add('active');
+                }
+                break;
         }
-        if (walkStep === this.state.step3) {
-            this.validationFormStep2();
-            if (this.validationFormStep2() === true) {
-                module_1.classList.remove('active');
-                module_2.classList.remove('active');
-                module_3.classList.add('active');
-                module_4.classList.remove('active');
-                module_5.classList.remove('active');
-
-                navStep1.classList.add('active');
-                navStep2.classList.add('active');
-                navStep3.classList.add('active');
-                navStep4.classList.remove('active');
-                navStep5.classList.remove('active');
-            }
-        }
-
-
-        if (walkStep === this.state.step4) {
-            this.validationFormStep3();
-            if (this.validationFormStep3() === true) {
-                module_1.classList.remove('active');
-                module_2.classList.remove('active');
-                module_3.classList.remove('active');
-                module_4.classList.add('active');
-                module_5.classList.remove('active');
-
-                navStep1.classList.add('active');
-                navStep2.classList.add('active');
-                navStep3.classList.add('active');
-                navStep4.classList.add('active');
-                navStep5.classList.remove('active');
-            }
-        }
-        if (walkStep === this.state.step5) {
-            this.validationFormStep4();
-            if (this.validationFormStep4() === true) {
-                module_1.classList.remove('active');
-                module_2.classList.remove('active');
-                module_3.classList.remove('active');
-                module_4.classList.remove('active');
-                module_5.classList.add('active');
-
-                navStep1.classList.add('active');
-                navStep2.classList.add('active');
-                navStep3.classList.add('active');
-                navStep4.classList.add('active');
-                navStep5.classList.add('active');
-            }
-        }
-
-        // if (walkStep === this.state.step5) {
-        //     this.validationFormStep4();
-        //     if (this.validationFormStep5() === true) {
-        //         module_1.classList.remove('active');
-        //         module_2.classList.remove('active');
-        //         module_3.classList.remove('active');
-        //         module_4.classList.remove('active');
-        //         module_5.classList.add('active');
-
-        //         navStep1.classList.add('active');
-        //         navStep2.classList.add('active');
-        //         navStep3.classList.add('active');
-        //         navStep4.classList.add('active');
-        //         navStep5.classList.add('active');
-        //         alert('okie');
-        //     }
-        // }
     }
     validationFormStep1 = () => {
         var flag = true;
@@ -315,7 +294,7 @@ class Index extends Component {
         }
         return flag;
     }
-   
+
     render() {
         return (
             <div>
