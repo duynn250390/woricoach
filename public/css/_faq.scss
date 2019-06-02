@@ -1,0 +1,126 @@
+.box_item_sum_result {
+    margin-top: 50px;
+    padding: 0 15px;
+}
+
+.box_result_fqa {
+    margin-bottom: 25px;
+    border: 1px solid #e1e1e1;
+    width: 100%;
+    position: relative;
+
+    .action_fqa {
+        display: inline-block;
+        position: absolute;
+        right: 35px;
+        top: 5px;
+
+        li {
+            display: inline-block;
+            margin-left: 10px;
+
+            i {
+                cursor: pointer;
+                width: 24px;
+                height: 24px;
+                text-align: center;
+                border-radius: 4px;
+                line-height: 24px;
+                color: #333;
+                font-size: 16px;
+
+                // background: #e1e1e1;
+                &:hover,
+                &:focus {
+                    opacity: 0.7;
+                }
+            }
+        }
+
+        li.update {
+            i {
+                color: #0c5460; // background: #086273;
+            }
+        }
+
+        li.delete {
+            i {
+                color: red;
+                // background: red;
+            }
+        }
+    }
+
+    .Collapsible {
+        display: block;
+        width: 100%;
+        position: relative;
+
+        .up_down_event {
+            position: absolute;
+            right: 5px;
+            top: 5px;
+            height: 24px;
+            width: 24px;
+            text-align: center;
+
+            i {
+                line-height: 24px;
+                font-size: 20px;
+            }
+        }
+
+        .Collapsible__trigger {
+            width: 100%;
+            font-weight: bold;
+            display: block;
+            color: #0c5460;
+            background-color: #d1ecf1;
+            border-color: #bee5eb;
+            cursor: pointer;
+            position: relative;
+
+            &:after {
+                font-family: 'FontAwesome';
+                content: '\f0a7';
+                position: absolute;
+                right: 10px;
+                top: 5px;
+                display: block;
+                transition: transform 300ms;
+            }
+        }
+
+        .is-open {
+            &:after {
+                transform: rotateZ(180deg);
+            }
+        }
+
+        .Collapsible__contentInner {
+            display: block;
+            width: 100%;
+            color: #000;
+            padding: 10px 15px;
+
+            .content_text {
+                margin: 0;
+            }
+        }
+
+
+    }
+}
+
+
+.fqa_admin {
+    .Collapsible__trigger {
+        padding: 5px 110px 5px 15px;
+    }
+}
+
+.fqa_client {
+    .Collapsible__trigger {
+        padding: 5px 25px 5px 15px;
+    }
+}

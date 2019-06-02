@@ -1,0 +1,6 @@
+{
+    "fqa": "http://localhost:8090/faq",
+    "user": "http://localhost:8090/users",
+    "coacher": "http://localhost:8090/coacher",
+    "sport": "http://localhost:8090/sport"
+}   

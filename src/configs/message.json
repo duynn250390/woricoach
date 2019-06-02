@@ -1,0 +1,34 @@
+{
+    "fqa": {
+        "quenstion": " Question is not empty ",
+        "answer": " Answer is not empty "
+    },
+    "user_register": {
+        "errorName": "You must enter your name ",
+        "errorEmail": "You must enter your email ",
+        "errorValidEmail": "Email is not correct ",
+        "errorBirthday": "You must enter your birthday ",
+        "errorGender": "You must select gender ",
+        "errorMobile": "You must enter your mobile ",
+        "errorValidMobile": "Your mobile not correct",
+        "errorAddress": "You must enter your address",
+        "errorpassword": "You must enter your password ",
+        "errorConfirmPassword": "You must enter your password ",
+        "matchingPassword": "Password and password confrim is not correct"
+    },
+    "user_profiles": {
+        "errorSelectSportName": "You must select sport name ",
+        "errorSelectGroup": "You must select group type",
+        "errorAdress": "Address is not empty ",
+        "expHlv": "experience is not empty",
+        "errorexpHlv": "Experience is not empty",
+        "errorExpTt": "Experience is not empty",
+        "errorPlandetail": "Experience is not empty",
+        "errorQuickView": "Experience is not empty"
+    },
+    "coacher_package": {
+        "errorPackage": "You must select other package",
+        "errorCost": "You must enter cost",
+        "errorTime": "You must select time"
+    }
+}

@@ -1,0 +1,235 @@
+.stepper-container {
+    padding: 1em;
+}
+
+.sum_box_step {
+    padding: 1em;
+    margin-top: 100px;
+    background: #fff;
+}
+
+.stepper-item-outer {
+    &:nth-of-type(even) {
+        width: 20% !important;
+    }
+}
+
+.stepper-container {
+    margin-top: 50px;
+
+    .stepper-item {
+        .stepper-title {
+            top: - 40px;
+            left: 0;
+            font-weight: bold;
+        }
+
+        .stepper-title-active {
+            color: #007cc3 !important;
+            @include tran_slow_03();
+        }
+    }
+}
+
+.control_action {
+    margin-top: 50px;
+    display: flex;
+
+    input {
+        display: flex;
+        padding: 0.5em 1em;
+        border: none;
+        background: #007cc3;
+        color: #fff;
+        @include tran_slow_03();
+
+        &:hover,
+        &:focus {
+            outline: none;
+            opacity: 0.8;
+            color: #fff;
+        }
+
+        &:nth-child(1) {
+            margin-right: auto !important
+        }
+    }
+}
+
+.step_box {
+    .table {
+        thead {
+            background: #007cc3;
+            color: #fff;
+            font-weight: bold;
+        }
+
+        tbody {
+            tr {
+                td {
+                    margin: 0;
+
+                    &:nth-child(1) {
+                        color: #000;
+                        font-weight: normal;
+                    }
+
+                    .form-group {
+                        margin-bottom: 0;
+                        display: block;
+                        text-align: center;
+
+
+                    }
+                }
+            }
+        }
+    }
+}
+
+.schu_check {
+    position: relative;
+    display: block;
+
+    input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+
+        &:checked {
+            ~.checkmark {
+                background: #007cc3;
+
+                &:after {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+
+    .checkmark {
+        position: absolute;
+        top: 0;
+        left: 40%;
+        height: 25px;
+        width: 25px;
+        background: #e1e1e1;
+        border-radius: 50%;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        -o-border-radius: 50%;
+        @include tran_slow_03();
+
+        &:after {
+            opacity: 0;
+            left: 10px;
+            top: 6px;
+            width: 7px;
+            height: 12px;
+            border: solid white;
+            border-width: 0 3px 3px 0;
+            -webkit-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+            -moz-transform: rotate(45deg);
+            -o-transform: rotate(45deg);
+            @include tran_slow_03();
+        }
+    }
+
+
+    // .checkcontainer input:checked ~ .checkmark
+    span {
+        &:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            width: 14px;
+            height: 14px;
+            background: #007cc3;
+        }
+    }
+
+}
+
+.step_4 {
+    .text_name {
+        margin-left: 3em;
+    }
+
+    .checkmark {
+        left: 1em;
+    }
+}
+
+.checkboxFive {
+    position: relative;
+
+    input[type=checkbox],
+    input[type=radio] {
+        &:checked {
+            &:after {}
+        }
+    }
+
+}
+
+.sum_cread_card {
+    display: block;
+    margin: 3em;
+
+    .form_cread_card {
+        margin: 0 auto;
+        width: 60%;
+        border-radius: 10px;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        -ms-border-radius: 10px;
+        -o-border-radius: 10px;
+        background: #007cc3;
+        padding: 2em 2.5em;
+
+        .form-label {
+            color: #fff;
+            font-weight: bold;
+        }
+
+        .row_card {
+            margin-bottom: 3em;
+        }
+    }
+
+    .text_diu {
+        width: 100%;
+    }
+
+}
+
+.step_box {
+    .form-group{
+        label{
+            font-weight:bold;
+            margin-bottom: 0;
+        }
+    }
+    .box_open_choose {
+        label{
+            font-weight: bold;
+        }
+        .tran_slow_3 {
+            @include tran_slow_03();
+        }
+
+    }
+}
+
+.btn_center {
+    align-items: center;
+    justify-content: center;
+}
+
+.font_bold {
+    font-weight: bold;
+    font-size: 1.02em;
+}
