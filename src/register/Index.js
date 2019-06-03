@@ -68,7 +68,6 @@ class Index extends Component {
         const navStep4 = document.querySelector('#step_4');
         const navStep5 = document.querySelector('#step_5');
 
-        const walkStep = step;
         switch (step) {
             case this.state.step1:
                 module_1.classList.add('active');
