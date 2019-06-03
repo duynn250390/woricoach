@@ -144,6 +144,7 @@ class Index extends Component {
                 break;
         }
     }
+
     validationFormStep1 = () => {
         var flag = true;
         if (this.state.username.trim().length === 0) {
@@ -301,9 +302,9 @@ class Index extends Component {
                     <div className="gb_section"></div>
                 </section>
                 <section className="ss_registe_body">
-                    <div className="container">
+                    <div className="container_dis">
                         <div className="heading_title posi_center">
-                            <h3>코치신청서를 작성해 주세요.</h3>
+                            <h2>코치신청서를 작성해 주세요.</h2>
                             <Link className="no_coach" to={'/'}>코치가 아니신가요?</Link>
                         </div>
                         <div className="step_regis_sum">
@@ -336,138 +337,150 @@ class Index extends Component {
                                     </li>
                                 </ul>
                             </div>
-                            <div className="step_regis regis_body_step">
-                                <div
-                                    className={`module_steper module_1 ${this.state.active === "step_1" ? 'active' : ''}`}>
-                                    <div className="fade-up">
-                                        <div className="form_group_md putFull">
-                                            <div className={`md_h md_box ${this.state.errorUsername}`}>
-                                                <label>이름</label>
-                                                <input type="text" value={this.state.username} onChange={(e) => this.setState({ username: e.target.value })} />
-                                                <div className="valida_feedback">{this.state.valiFeedback_Username}</div>
+                            <div className="container_dis">
+                                <div className="step_regis regis_body_step">
+                                    <div
+                                        className={`module_steper module_1 ${this.state.active === "step_1" ? 'active' : ''}`}>
+                                        <div className="fade-up col_sum">
+                                            <div className="form_group_md putFull">
+                                                <div className={`md_h md_box ${this.state.errorUsername}`}>
+                                                    <label>이름</label>
+                                                    <input type="text" value={this.state.username} onChange={(e) => this.setState({ username: e.target.value })} />
+                                                    <div className="valida_feedback">{this.state.valiFeedback_Username}</div>
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div className="form_group_md putFull ">
-                                            <div className={`md_h md_box ${this.state.errorEmail}`}>
-                                                <label>E-mail</label>
-                                                <input type="email" value={this.state.email} onChange={(e) => this.setState({ email: e.target.value })} />
-                                                <div className="valida_feedback">{this.state.valiFeedback_Email}</div>
+                                            <div className="form_group_md putFull ">
+                                                <div className={`md_h md_box ${this.state.errorEmail}`}>
+                                                    <label>E-mail</label>
+                                                    <input type="email" value={this.state.email} onChange={(e) => this.setState({ email: e.target.value })} />
+                                                    <div className="valida_feedback">{this.state.valiFeedback_Email}</div>
+                                                </div>
+                                                <div className="md_h md_box putFull">
+                                                    <label className="opa_0">Email</label>
+                                                    <button type="button" className="md_bottom" >중복체크</button>
+                                                </div>
                                             </div>
-                                            <div className="md_h md_box putFull">
-                                                <label className="opa_0">Email</label>
-                                                <button type="button" className="md_bottom" >중복체크</button>
-                                            </div>
-                                        </div>
-                                        <div className="form_group_md ">
-                                            <div className={`md_h md_box putFull ${this.state.errorBirthday}`}>
-                                                <label>생년월일</label>
-                                                <input type="date" value={this.state.birthday} onChange={(e) => this.setState({ birthday: e.target.value })} />
-                                                <div className="valida_feedback">{this.state.valiFeedback_Birthday}</div>
-                                            </div>
-                                            <div className="md_h md_box box_gender_no">
-                                                <label className="heading">성별</label>
-                                                <label className="gender ">
-                                                    <input type="radio" className="action_radio" name="gender" value={this.state.gender_male} onChange={(e) => this.setState({ gender_male: !this.state.gender_male })} />남
+                                            <div className="form_group_md ">
+                                                <div className={`md_h md_box putFull ${this.state.errorBirthday}`}>
+                                                    <label>생년월일</label>
+                                                    <input type="date" className="put_name_date" value={this.state.birthday} onChange={(e) => this.setState({ birthday: e.target.value })} />
+                                                    <div className="valida_feedback">{this.state.valiFeedback_Birthday}</div>
+                                                </div>
+                                                <div className="md_h md_box box_gender_no">
+                                                    <label className="heading">성별</label>
+                                                    <label className="gender ">
+                                                        <input type="radio" className="action_radio" name="gender" value={this.state.gender_male} onChange={(e) => this.setState({ gender_male: !this.state.gender_male })} />남
                                                 <span className="checkmark"></span>
-                                                </label>
-                                                <label className="gender ">
-                                                    <input type="radio" className="action_radio" name="gender" value={this.state.gender_female} onChange={(e) => this.setState({ gender_female: !this.state.gender_female })} />여
+                                                    </label>
+                                                    <label className="gender ">
+                                                        <input type="radio" className="action_radio" name="gender" value={this.state.gender_female} onChange={(e) => this.setState({ gender_female: !this.state.gender_female })} />여
                                                 <span className="checkmark"></span>
-                                                </label>
-                                                <div className="valida_feedback">{this.state.valiFeedback_Gender}</div>
+                                                    </label>
+                                                    <div className="valida_feedback">{this.state.valiFeedback_Gender}</div>
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div className="form_group_md putFull">
-                                            <div className={`md_h md_box ${this.state.errorAddress}`}>
-                                                <label>연락처</label>
-                                                <input type="text" value={this.state.address} onChange={(e) => this.setState({ address: e.target.value })} />
-                                                <div className="valida_feedback">{this.state.valiFeedback_Address}</div>
+                                            <div className="form_group_md putFull">
+                                                <div className={`md_h md_box ${this.state.errorAddress}`}>
+                                                    <label>연락처</label>
+                                                    <input type="text" value={this.state.address} onChange={(e) => this.setState({ address: e.target.value })} />
+                                                    <div className="valida_feedback">{this.state.valiFeedback_Address}</div>
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div className="form_group_md putFull">
-                                            <div className={`md_h md_box ${this.state.errorPassword}`}>
-                                                <label>비밀번호</label>
-                                                <input type="password" value={this.state.password} onChange={(e) => this.setState({ password: e.target.value })} />
-                                                <div className="valida_feedback">{this.state.valiFeedback_Password}</div>
+                                            <div className="form_group_md putFull">
+                                                <div className={`md_h md_box ${this.state.errorPassword}`}>
+                                                    <label>비밀번호</label>
+                                                    <input type="password" value={this.state.password} onChange={(e) => this.setState({ password: e.target.value })} />
+                                                    <div className="valida_feedback">{this.state.valiFeedback_Password}</div>
+                                                </div>
+                                                <div className={`md_h md_box ${this.state.errorRepassword}`}>
+                                                    <label>암호 다시 입력</label>
+                                                    <input type="password" value={this.state.repassword} onChange={(e) => this.setState({ repassword: e.target.value })} />
+                                                    <div className="valida_feedback">{this.state.valiFeedback_Repassword}</div>
+                                                </div>
                                             </div>
-                                            <div className={`md_h md_box ${this.state.errorRepassword}`}>
-                                                <label>암호 다시 입력</label>
-                                                <input type="password" value={this.state.repassword} onChange={(e) => this.setState({ repassword: e.target.value })} />
-                                                <div className="valida_feedback">{this.state.valiFeedback_Repassword}</div>
+                                            <div className="form_group_md footer_box_md">
+                                                <div className="form_box_btn">
+                                                    <button className="btn_next" onClick={(e) => this.handleClickBtnNext(e, 'step_2', 'ani_1')} >다음 것</button>
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div className="form_group_md footer_box_md">
-                                            <button className="btn_next" onClick={(e) => this.handleClickBtnNext(e, 'step_2', 'ani_1')} >다음 것</button>
                                         </div>
                                     </div>
-                                </div>
-                                {/* module_1 */}
-                                <div
-                                    className={`module_steper module_2 ${this.state.active === "step_2" ? 'active' : ''}`}>
-                                    <div className="fade-up">
-                                        <div className="form_group_md putFull">
-                                            <div className={`md_h md_box ${this.state.errorInputTest2}`}>
-                                                <label>이름</label>
-                                                <input type="text" value={this.state.inputTest2} onChange={(e) => this.setState({ inputTest2: e.target.value })} />
+                                    {/* module_1 */}
+                                    <div
+                                        className={`module_steper module_2 ${this.state.active === "step_2" ? 'active' : ''}`}>
+                                        <div className="fade-up col_sum">
+                                            <div className="form_group_md putFull">
+                                                <div className={`md_h md_box ${this.state.errorInputTest2}`}>
+                                                    <label>이름</label>
+                                                    <input type="text" value={this.state.inputTest2} onChange={(e) => this.setState({ inputTest2: e.target.value })} />
+                                                </div>
+                                            </div>
+                                            <div className="form_group_md footer_box_md">
+                                                <div className="form_box_btn">
+                                                    <button className="btn_prev" onClick={(e) => this.handleClickBtnNext(e, 'step_1')} >뒤로</button>
+                                                    <button className="btn_next" onClick={(e) => this.handleClickBtnNext(e, 'step_3', 'ani_2')} >다음 것</button>
+                                                </div>
                                             </div>
                                         </div>
-                                        <div className="form_group_md footer_box_md">
-                                            <button className="btn_prev" onClick={(e) => this.handleClickBtnNext(e, 'step_1')} >뒤로</button>
-                                            <button className="btn_next" onClick={(e) => this.handleClickBtnNext(e, 'step_3', 'ani_2')} >다음 것</button>
-                                        </div>
                                     </div>
-                                </div>
-                                {/* module_2 */}
-                                <div
-                                    className={`module_steper module_3 ${this.state.active === "step_3" ? 'active' : ''}`}>
-                                    <div className="fade-up">
-                                        <div className="form_group_md putFull">
-                                            <div className={`md_h md_box ${this.state.errorInputTest3}`}>
-                                                <label>이름</label>
-                                                <input type="text" value={this.state.inputTest3} onChange={(e) => this.setState({ inputTest3: e.target.value })} />
+                                    {/* module_2 */}
+                                    <div
+                                        className={`module_steper module_3 ${this.state.active === "step_3" ? 'active' : ''}`}>
+                                        <div className="fade-up col_sum">
+                                            <div className="form_group_md putFull">
+                                                <div className={`md_h md_box ${this.state.errorInputTest3}`}>
+                                                    <label>이름</label>
+                                                    <input type="text" value={this.state.inputTest3} onChange={(e) => this.setState({ inputTest3: e.target.value })} />
+                                                </div>
+                                            </div>
+                                            <div className="form_group_md footer_box_md">
+                                                <div className="form_box_btn">
+                                                    <button className="btn_prev" onClick={(e) => this.handleClickBtnNext(e, 'step_2')} >뒤로</button>
+                                                    <button className="btn_next" onClick={(e) => this.handleClickBtnNext(e, 'step_4', 'ani_3')} >다음 것</button>
+                                                </div>
                                             </div>
                                         </div>
-                                        <div className="form_group_md footer_box_md">
-                                            <button className="btn_prev" onClick={(e) => this.handleClickBtnNext(e, 'step_2')} >뒤로</button>
-                                            <button className="btn_next" onClick={(e) => this.handleClickBtnNext(e, 'step_4', 'ani_3')} >다음 것</button>
-                                        </div>
                                     </div>
-                                </div>
-                                {/* module_3 */}
-                                <div
-                                    className={`module_steper module_4 ${this.state.active === "step_4" ? 'active' : ''}`}>
-                                    <div className="fade-up">
-                                        <div className="form_group_md putFull">
-                                            <div className={`md_h md_box ${this.state.errorInputTest4}`}>
-                                                <label>이름</label>
-                                                <input type="text" value={this.state.inputTest4} onChange={(e) => this.setState({ inputTest4: e.target.value })} />
+                                    {/* module_3 */}
+                                    <div
+                                        className={`module_steper module_4 ${this.state.active === "step_4" ? 'active' : ''}`}>
+                                        <div className="fade-up col_sum">
+                                            <div className="form_group_md putFull">
+                                                <div className={`md_h md_box ${this.state.errorInputTest4}`}>
+                                                    <label>이름</label>
+                                                    <input type="text" value={this.state.inputTest4} onChange={(e) => this.setState({ inputTest4: e.target.value })} />
+                                                </div>
+                                            </div>
+                                            <div className="form_group_md footer_box_md">
+                                                <div className="form_box_btn">
+                                                    <button className="btn_prev" onClick={(e) => this.handleClickBtnNext(e, 'step_3')} >뒤로4</button>
+                                                    <button className="btn_next" onClick={(e) => this.handleClickBtnNext(e, 'step_5', 'ani_4')} >다음 것</button>
+                                                </div>
                                             </div>
                                         </div>
-                                        <div className="form_group_md footer_box_md">
-                                            <button className="btn_prev" onClick={(e) => this.handleClickBtnNext(e, 'step_3')} >뒤로4</button>
-                                            <button className="btn_next" onClick={(e) => this.handleClickBtnNext(e, 'step_5', 'ani_4')} >다음 것</button>
-                                        </div>
-                                    </div>
 
-                                </div>
-                                {/* module_4 */}
-                                <div
-                                    className={`module_steper module_5 ${this.state.active === "step_5" ? 'active' : ''}`}>
-                                    <div className="fade-up">
-                                        <div className="form_group_md putFull">
-                                            <div className={`md_h md_box ${this.state.errorInputTest5}`}>
-                                                <label>이름</label>
-                                                <input type="text" value={this.state.inputTest5} onChange={(e) => this.setState({ inputTest5: e.target.value })} />
+                                    </div>
+                                    {/* module_4 */}
+                                    <div
+                                        className={`module_steper module_5 ${this.state.active === "step_5" ? 'active' : ''}`}>
+                                        <div className="fade-up col_sum">
+                                            <div className="form_group_md putFull">
+                                                <div className={`md_h md_box ${this.state.errorInputTest5}`}>
+                                                    <label>이름</label>
+                                                    <input type="text" value={this.state.inputTest5} onChange={(e) => this.setState({ inputTest5: e.target.value })} />
+                                                </div>
+                                            </div>
+                                            <div className="form_group_md footer_box_md">
+                                                <div className="form_box_btn">
+                                                    <button className="btn_prev" onClick={(e) => this.handleClickBtnNext(e, 'step_4')} >뒤로</button>
+                                                    <button className="btn_finish" onClick={(e) => this.handleClickBtnNext(e, 'step_done', 'ani_5')} >끝</button>
+                                                </div>
                                             </div>
                                         </div>
-                                        <div className="form_group_md footer_box_md">
-                                            <button className="btn_prev" onClick={(e) => this.handleClickBtnNext(e, 'step_4')} >뒤로</button>
-                                            <button className="btn_finish" onClick={(e) => this.handleClickBtnNext(e, 'step_done', 'ani_5')} >끝</button>
-                                        </div>
-                                    </div>
 
+                                    </div>
+                                    {/* module_5 */}
                                 </div>
-                                {/* module_5 */}
                             </div>
                         </div>
                     </div>

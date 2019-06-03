@@ -1,6 +1,6 @@
 import React from 'react';
 import Stepper from 'react-js-stepper';
-import { Container, Form, Button, ButtonToolbar, InputGroup, Jumbotron, Row, Table, Col } from 'react-bootstrap';
+import { Container, Form, Button, ButtonToolbar, Row, Table, Col } from 'react-bootstrap';
 import $ from "jquery";
 import errorList from '../configs/message.json';
 import urlLink from '../configs/url.json';

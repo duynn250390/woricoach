@@ -33,6 +33,7 @@
     "react-js-stepper": "^1.2.3",
     "react-kakao-login": "^1.1.1",
     "react-multistep": "^3.6.6",
+    "react-redux": "^7.0.3",
     "react-router": "^5.0.0",
     "react-router-dom": "^5.0.0",
     "react-schedule-selector": "^1.0.3",

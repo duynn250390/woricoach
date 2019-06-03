@@ -1,56 +1,26 @@
 import React, { Component } from 'react';
 import { createStore } from 'redux'
-import {status,sort} from './action/index'
+import myReducer from './reducers/indexReducers'
+import { Provider } from 'react-redux'
+import TastList from './component/Tasklist';
+const store = createStore(myReducer);
 
-var initialState = {
-    status: false,
-    sort: {
-        by: 'name',
-        value: 1
-    }
-}
-var myReducer = (state = initialState, action) => {
-    if (action.type === 'TONGEL_STATUS') {
-        state.status = !state.status;
-        return state;
-    }
-    if(action.type === 'SORT'){
-        var {by,value} = action.sort;
-        var {status} = state;
-        return{
-            status: status,
-            sort:{
-                by: by,
-                value: value
-            }
+class index extends Component {
+    componentWillMount() {
+        if (localStorage && localStorage.getItem('task')) {
+            console.log(localStorage.getItem('task'));
+            var tasks_parse = JSON.parse(localStorage.getItem('task'));
+            console.log(tasks_parse);
+        } else {
+            console.log('Không có dữ liệu');
         }
     }
-    return state;
-}
-const store = createStore(myReducer);
-// Thay doi status
-var StatusAction =  {
-    type: 'TONGEL_STATUS'
-}
-console.log('Mặc định: ', store.getState());
-
-store.dispatch(status());
-
-console.log('TONGEL STATUS: ', store.getState());
-
-store.dispatch(sort({
-    by: 'Hello',
-    value: '-1'
-}));
-console.log('SORT : ', store.getState());
-class index extends Component {
     render() {
         return (
-            <div>
-                <h3>Hello</h3>
-            </div>
+            <Provider store={store}>
+                <TastList />
+            </Provider>
         );
     }
 }
-
 export default index;

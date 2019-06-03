@@ -50,13 +50,13 @@
     .heading_title {
         display: block;
 
-        h3 {
+        h2 {
             font-weight: bold;
         }
 
         .no_coach {
             text-decoration: none;
-            font-size: 1.1em;
+            font-size: 1.5em;
             font-weight: bold;
             color: $colMain;
             position: relative;
@@ -102,17 +102,31 @@
                 opacity: 0.7;
             }
 
+            &:nth-child(1) {
+                &:after {
+                    width: 200%;
+                    left: -100%;
+                }
+            }
+
+            &:nth-child(5) {
+                &:after {
+                    width: 200%;
+                    right: -100%;
+                }
+            }
+
             &:before {
                 color: #fff;
-                width: 80px;
-                height: 80px;
+                width: 120px;
+                height: 120px;
                 content: '';
                 font-family: FontAwesome;
                 font-style: normal;
                 font-weight: normal;
                 text-decoration: inherit;
-                font-size: 1.8em;
-                line-height: 80px;
+                font-size: 2.6em;
+                line-height: 120px;
                 border: 2px solid #d1f0f4;
                 display: block;
                 text-align: center;
@@ -134,7 +148,7 @@
                 content: '';
                 position: absolute;
                 background-color: #d1f0f4;
-                top: 40px;
+                top: 60px;
                 left: 0%;
                 z-index: -1;
                 @include tran_slow_03();
@@ -200,6 +214,8 @@
             display: none;
             padding: 2em;
 
+            .col_sum {}
+
             .putFull {
 
                 input,
@@ -226,7 +242,7 @@
                     textarea,
                     button {
                         display: block;
-                        padding: 0.5em .75em;
+                        padding: 0.8em .75em;
                         line-height: 1.5;
                         font-size: 1.2rem;
                     }
@@ -244,6 +260,34 @@
                         -moz-transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
                         -ms-transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
                         -o-transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+                    }
+
+                    .put_name_date {
+                        position: relative;
+
+                        &::before {
+                            top: 40%;
+                            right: 15px;
+                            position: absolute;
+                            content: '\f073';
+                            font-family: FontAwesome;
+                            font-style: normal;
+                            font-size: 1.6em;
+                            font-weight: normal;
+                            text-decoration: inherit;
+                            line-height: 20px;
+                            cursor: pointer;
+                            @include tran_slow_03();
+
+                        }
+                    }
+
+                    [type="date"]::-webkit-inner-spin-button {
+                        display: none;
+                    }
+
+                    [type="date"]::-webkit-calendar-picker-indicator {
+                        opacity: 0;
                     }
 
                     .md_bottom {
@@ -266,7 +310,7 @@
                 }
 
                 .md_h {
-                    width: 50%;
+                    width: 33.33333%;
                 }
 
                 .md_f {
@@ -305,11 +349,19 @@
             }
 
             .footer_box_md {
-                border-top: 1px solid #9b9b9b;
-                padding-top: 1em;
+
+                padding: 0 1em;
                 display: flex;
                 font-size: 1.2em;
                 justify-content: flex-end;
+
+                .form_box_btn {
+                    border-top: 1px solid #9b9b9b;
+                    display: block;
+                    width: 100%;
+                    text-align: right;
+                    padding: 1em 0;
+                }
 
                 button {
                     padding: 0.5em 2em;
@@ -348,6 +400,21 @@
     }
 }
 
+.regis_body_step {
+    .module_steper {
+        .col_sum {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 2em 5em;
+
+            .form_group_md {
+                width: 100%;
+
+                .md_h {}
+            }
+        }
+    }
+}
 
 .opa_0 {
     opacity: 0;
