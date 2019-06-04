@@ -1,46 +1,7 @@
-.heading_title {
-    display: block;
-
-    h2 {
-        font-size: 2.8em;
-    }
-
-    h3 {
-        font-size: 2.4em;
-    }
-
-    h4 {
-        font-size: 2em;
-    }
-
-    h5 {
-        font-size: 1.6em;
-    }
-
-    h6 {
-        font-size: 1.2em;
-    }
-}
-
 .ss_registe_header {
-    background: #e1e1e1;
-    position: relative;
-    overflow: hidden;
-    min-height: 687px;
-    height: 76vh !important;
-
     .gb_section {
         background: url("../img/bg_header_register.jpg") no-repeat center;
-        background-size: cover;
-        -webkit-transform: scale(1.1);
-        -ms-transform: scale(1.1);
-        transform: scale(1.1);
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        z-index: 1;
+
     }
 }
 
@@ -551,4 +512,17 @@
 
     }
 
+}
+
+.list_info_coach {
+    margin-top: 3em;
+
+    .heading_tit {
+        display: block;
+
+        .title {
+            font-size: 1.8em;
+            font-weight: bold;
+        }
+    }
 }

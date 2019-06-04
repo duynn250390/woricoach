@@ -14,6 +14,7 @@ import FRegister from './coacher/Register';
 import Index from './index/index';
 import Register from './register/Index';
 import indexREDUC from './redux/index';
+import Profile from './profile/index';
 
 
 const routing = (
@@ -28,6 +29,7 @@ const routing = (
             <Route path="/coach/register/stepper" component={Steppers} />
             <Route path="/coacher/register" component={FRegister} />
             <Route path="/redux" component={indexREDUC} />
+            <Route path="/profile" component={Profile} />
             {/* <Route path="/coacher/profiles" component={Profiles} /> */}
             <Route component={Index} />
         </Switch>

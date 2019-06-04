@@ -32,11 +32,11 @@
 
                 a {
                     color: #fff;
-                    padding: 0 2em;
+                    padding: 0 1.8em;
                     text-decoration: none;
                     outline: none;
                     font-weight: bold;
-                    font-size: 1.4em;
+                    font-size: 1.3em;
                     @include tran_slow_03();
 
                 }
@@ -853,7 +853,7 @@
 // END main_footer
 .fix_menu_header {
     background: #fff;
-    @include shadow();
+    @include shadow_bottom();
 
     .main_menu {
         ul {
@@ -910,6 +910,27 @@
 .menu_re {
     display: none;
 }
+.ss_profile_header {
+    background: #e1e1e1;
+    position: relative;
+    overflow: hidden;
+    min-height: 687px;
+    height: 76vh !important;
+
+    .gb_section {
+        background-size: cover;
+        -webkit-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+        transform: scale(1.1);
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+    }
+}
+
 
 // ========================================================
 // ---------------RESPONTIVE-------------------------------

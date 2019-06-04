@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Header from './Header';
 import Footer from './Footer';
+import { $, jQuery } from 'jquery';
 require('./query');
 class Index extends Component {
     constructor(props) {
@@ -81,7 +82,7 @@ class Index extends Component {
     componentWillUnmount() {
         window.removeEventListener('scroll', this.handleScroll);
     }
-    
+
     render() {
         return (
             <div>

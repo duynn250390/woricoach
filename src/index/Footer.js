@@ -6,7 +6,7 @@ class Footer extends Component {
         return (
             <div>
                 <section className="main_section_5" id="main_section_5">
-                    <div className="container">
+                    <div className="container_dis">
                         <div className="sum_box_ss5">
                             <div className="box_item_ss5">
                                 <div className="heading_title">

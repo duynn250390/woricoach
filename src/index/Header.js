@@ -35,7 +35,7 @@ class Header extends Component {
                                 <Link to={'/register'}>코치로 등록하기</Link>
                             </li>
                             <li>
-                                <Link to={'/admin'}>시설 및 장소 찾기</Link>
+                                <Link to={'/profile'}>시설 및 장소 찾기</Link>
                             </li>
                             <li>
                                 <Link to={'/'}>회원가입</Link>
