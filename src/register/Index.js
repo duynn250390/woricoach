@@ -12,7 +12,7 @@ class Index extends Component {
         this.state = {
             status: '',
             step: 'ani_1',
-            active: 'step_2',
+            active: 'step_1',
             ativeMenu: 'hello',
             step_start: 'step_start',
             step1: 'step_1',
