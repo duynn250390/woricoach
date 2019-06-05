@@ -6,7 +6,7 @@
 }
 
 .ss_registe_body {
-    padding: 4% 0;
+    padding: 6em 0;
 
     .heading_title {
         display: block;
@@ -24,10 +24,7 @@
 
             &:after {
                 content: '\f178';
-                font-family: FontAwesome;
-                font-style: normal;
-                font-weight: normal;
-                text-decoration: inherit;
+                @include fontFA();
                 position: absolute;
                 top: 0px;
                 right: -30px;
@@ -82,10 +79,7 @@
                 width: 120px;
                 height: 120px;
                 content: '';
-                font-family: FontAwesome;
-                font-style: normal;
-                font-weight: normal;
-                text-decoration: inherit;
+                @include fontFA();
                 font-size: 2.6em;
                 line-height: 120px;
                 border: 2px solid #d1f0f4;
@@ -231,7 +225,7 @@
                             right: 15px;
                             position: absolute;
                             content: '\f073';
-                            font-family: FontAwesome;
+                            @include fontFA();
                             font-style: normal;
                             font-size: 1.6em;
                             font-weight: normal;
@@ -419,10 +413,7 @@
                 position: absolute;
                 display: none;
                 content: '\f00c';
-                font-family: FontAwesome;
-                font-style: normal;
-                font-weight: normal;
-                text-decoration: inherit;
+                @include fontFA();
                 line-height: 20px;
                 @include tran_slow_03();
             }
@@ -516,13 +507,31 @@
 
 .list_info_coach {
     margin-top: 3em;
+}
 
-    .heading_tit {
-        display: block;
+.heading_tit {
+    display: block;
 
-        .title {
-            font-size: 1.8em;
-            font-weight: bold;
-        }
+    .title {
+        font-size: 1.8em;
+        font-weight: bold;
+    }
+}
+
+.box_group_2_colum {
+    display: flex;
+    display: -ms-flexbox;
+    flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-grow: 1;
+
+
+    .box_item {
+        flex-grow: 1;
+        max-width: 100%;
+        -ms-flex-preferred-size: 0;
+        flex-basis: 0;
+        -ms-flex-positive: 1;
+        width: 100%;
     }
 }

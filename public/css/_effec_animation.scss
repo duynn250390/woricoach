@@ -34,6 +34,13 @@
     overflow: hidden;
 }
 
+@mixin fontFA() {
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+}
+
 @mixin tran_slow_03 {
     -webkit-transition: all 0.3s ease-in-out 0s;
     -o-transition: all 0.3s ease-in-out 0s;
@@ -123,7 +130,7 @@
         -moz-transform: scale(1);
         -ms-transform: scale(1);
         -o-transform: scale(1);
-}
+    }
 
     100% {
         transform: scale(1.2);
@@ -131,7 +138,7 @@
         -moz-transform: scale(1.2);
         -ms-transform: scale(1.2);
         -o-transform: scale(1.2);
-}
+    }
 }
 
 @-webkit-keyframes zoomBig {

@@ -12,7 +12,7 @@ class Index extends Component {
         this.state = {
             status: '',
             step: 'ani_1',
-            active: 'step_1',
+            active: 'step_2',
             ativeMenu: 'hello',
             step_start: 'step_start',
             step1: 'step_1',
@@ -293,7 +293,7 @@ class Index extends Component {
         }
         return flag;
     }
-   
+
     render() {
         return (
             <div>
@@ -310,27 +310,27 @@ class Index extends Component {
                         <div className="step_regis_sum">
                             <div className="step_regis">
                                 <ul className="regis_nav_step">
-                                    <li className="step_item step_1 active" id="step_1"
+                                    <li className={`step_item step_1 ${this.state.active === "step_1" ? 'active' : ''}`} id="step_1"
                                     //  onClick={(e) => this.handleClickBtnNext(e, 'step_1', 'ani_1')}
                                     >
                                         <span className="text_item">기본정보</span>
                                     </li>
-                                    <li className="step_item step_2 " id="step_2"
+                                    <li className={`step_item step_1 ${this.state.active === "step_2" ? 'active' : ''}`} id="step_2"
                                     // onClick={(e) => this.handleClickBtnNext(e, 'step_2', 'ani_2')}
                                     >
                                         <span className="text_item">코치프로필</span>
                                     </li>
-                                    <li className="step_item step_3 " id="step_3"
+                                    <li className={`step_item step_1 ${this.state.active === "step_3" ? 'active' : ''}`} id="step_3"
                                     //  onClick={(e) => this.handleClickBtnNext(e, 'step_3', 'ani_3')}
                                     >
                                         <span className="text_item">코치프로필</span>
                                     </li>
-                                    <li className="step_item step_4 " id="step_4"
+                                    <li className={`step_item step_1 ${this.state.active === "step_4" ? 'active' : ''}`} id="step_4"
                                     // onClick={(e) => this.handleClickBtnNext(e, 'step_4', 'ani_4')}
                                     >
                                         <span className="text_item">스케쥴관리</span>
                                     </li>
-                                    <li className="step_item step_5 " id="step_5"
+                                    <li className={`step_item step_1 ${this.state.active === "step_5" ? 'active' : ''}`} id="step_5"
                                     // onClick={(e) => this.handleClickBtnNext(e, 'step_5', 'ani_5')}
                                     >
                                         <span className="text_item">스케쥴관리</span>
@@ -409,10 +409,38 @@ class Index extends Component {
                                     <div
                                         className={`module_steper module_2 ${this.state.active === "step_2" ? 'active' : ''}`}>
                                         <div className="fade-up col_sum">
-                                            <div className="form_group_md putFull">
+                                            {/* <div className="form_group_md putFull">
                                                 <div className={`md_h md_box ${this.state.errorInputTest2}`}>
                                                     <label>이름</label>
                                                     <input type="text" value={this.state.inputTest2} onChange={(e) => this.setState({ inputTest2: e.target.value })} />
+                                                </div>
+                                            </div> */}
+                                            <div className="box_group_2_colum">
+                                                <div className="box_colum box_item">
+                                                    <div className="form_group_md putFull">
+                                                        <div className="md_f md_box">
+                                                            <label>비밀번호</label>
+                                                            <input type="password" value={this.state.password} onChange={(e) => this.setState({ password: e.target.value })} />
+                                                            <div className="valida_feedback">{this.state.valiFeedback_Password}</div>
+                                                        </div>
+                                                    </div>
+                                                    <div className="form_group_md putFull">
+                                                        <div className="md_f md_box">
+                                                            <label>비밀번호</label>
+                                                            <input type="password" value={this.state.password} onChange={(e) => this.setState({ password: e.target.value })} />
+                                                            <div className="valida_feedback">{this.state.valiFeedback_Password}</div>
+                                                        </div>
+                                                    </div>
+                                                    <div className="form_group_md putFull">
+                                                        <div className="md_f md_box">
+                                                            <label>비밀번호</label>
+                                                            <input type="password" value={this.state.password} onChange={(e) => this.setState({ password: e.target.value })} />
+                                                            <div className="valida_feedback">{this.state.valiFeedback_Password}</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div className="box_colum box_item">
+                                                    v
                                                 </div>
                                             </div>
                                             <div className="form_group_md footer_box_md">

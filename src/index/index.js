@@ -3,6 +3,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Header from './Header';
 import Footer from './Footer';
 import { $, jQuery } from 'jquery';
+import Slider from "react-slick";
+
 require('./query');
 class Index extends Component {
     constructor(props) {
@@ -84,12 +86,48 @@ class Index extends Component {
     }
 
     render() {
+        var slick = {
+            dots: false,
+            infinite: true,
+            speed: 500,
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            autoplay: true,
+            autoplaySpeed: 4000,
+            className:'slide_items',
+            responsive: [
+                {
+                    breakpoint: 1024,
+                    settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 3,
+                        infinite: true,
+                        dots: false
+                    }
+                },
+                {
+                    breakpoint: 768,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 2,
+                        initialSlide: 2
+                    }
+                },
+                {
+                    breakpoint: 480,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    }
+                }
+            ]
+        };
         return (
             <div>
                 <Header />
                 <section className="main_section_slide div_bot_top" id="main_section_slide" data-fade={this.state.att_class_ss1}>
                     <div className="gb_section action"></div>
-                    <div className="container indez_top" >
+                    <div className="container_dis indez_top" >
                         <div className="box_content_slide ">
                             <figure data-an="fade-up">
                                 <img className="img_slide action_text" src={process.env.PUBLIC_URL + '/img/sli_WooriCoach.png'} alt="We Coach" />
@@ -146,7 +184,7 @@ class Index extends Component {
                     <div className="gb_section"></div>
                     <div className="container indez_top">
                         <div className="body_slide">
-                            <div className="slide_items">
+                            <Slider className="slide_items" {...slick}>
                                 <div className="item">
                                     <div className="body_item">
                                         <div className="thumb_item_slide">
@@ -160,12 +198,14 @@ class Index extends Component {
                                             </div>
                                             <ul className="infor_text_slide">
                                                 <li className="name_text">홍길동</li>
-                                                <li className="show_star">
-                                                    <span className="star_show star_show_ena ">1</span>
-                                                    <span className="star_show star_show_ena ">2</span>
-                                                    <span className="star_show star_show_ena ">3</span>
-                                                    <span className="star_show star_show_ena ">4</span>
-                                                    <span className="star_show star_show_dis ">5</span>
+                                                <li className="show_star start_coach">
+                                                    <ul>
+                                                        <li className="star start_active"></li>
+                                                        <li className="star start_active"></li>
+                                                        <li className="star start_active"></li>
+                                                        <li className="star "></li>
+                                                        <li className="star"></li>
+                                                    </ul>
                                                 </li>
                                             </ul>
                                         </div>
@@ -184,12 +224,92 @@ class Index extends Component {
                                             </div>
                                             <ul className="infor_text_slide">
                                                 <li className="name_text">홍길동</li>
-                                                <li className="show_star">
-                                                    <span className="star_show star_show_ena ">1</span>
-                                                    <span className="star_show star_show_ena ">2</span>
-                                                    <span className="star_show star_show_ena ">3</span>
-                                                    <span className="star_show star_show_ena ">4</span>
-                                                    <span className="star_show star_show_dis ">5</span>
+                                                <li className="show_star start_coach">
+                                                    <ul>
+                                                        <li className="star start_active"></li>
+                                                        <li className="star start_active"></li>
+                                                        <li className="star start_active"></li>
+                                                        <li className="star "></li>
+                                                        <li className="star"></li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>{/* item */}
+                                <div className="item">
+                                    <div className="body_item">
+                                        <div className="thumb_item_slide">
+                                            <img src={process.env.PUBLIC_URL + '/img/slide_news/slide_new_03.jpg'} alt="" />
+                                            <div className="overlay_img"></div>
+                                            <div className="text_heading"><a href="#">위코치 코치</a></div>
+                                        </div>
+                                        <div className="body_item_slide">
+                                            <div className="text_body">
+                                                <p>친절히 잘 가르쳐 주셔서 실력이 업그레이드 됬습니다.</p>
+                                            </div>
+                                            <ul className="infor_text_slide">
+                                                <li className="name_text">홍길동</li>
+                                                <li className="show_star start_coach">
+                                                    <ul>
+                                                        <li className="star start_active"></li>
+                                                        <li className="star start_active"></li>
+                                                        <li className="star start_active"></li>
+                                                        <li className="star "></li>
+                                                        <li className="star"></li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>{/* item */}
+                                <div className="item">
+                                    <div className="body_item">
+                                        <div className="thumb_item_slide">
+                                            <img src={process.env.PUBLIC_URL + '/img/slide_news/slide_new_01.jpg'} alt="" />
+                                            <div className="overlay_img"></div>
+                                            <div className="text_heading"><a href="#">위코치 코치</a></div>
+                                        </div>
+                                        <div className="body_item_slide">
+                                            <div className="text_body">
+                                                <p>친절히 잘 가르쳐 주셔서 실력이 업그레이드 됬습니다.</p>
+                                            </div>
+                                            <ul className="infor_text_slide">
+                                                <li className="name_text">홍길동</li>
+                                                <li className="show_star start_coach">
+                                                    <ul>
+                                                        <li className="star start_active"></li>
+                                                        <li className="star start_active"></li>
+                                                        <li className="star start_active"></li>
+                                                        <li className="star "></li>
+                                                        <li className="star"></li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>{/* item */}
+                                <div className="item">
+                                    <div className="body_item">
+                                        <div className="thumb_item_slide">
+                                            <img src={process.env.PUBLIC_URL + '/img/slide_news/slide_new_02.jpg'} alt="" />
+                                            <div className="overlay_img"></div>
+                                            <div className="text_heading"><a href="#">위코치 코치</a></div>
+                                        </div>
+                                        <div className="body_item_slide">
+                                            <div className="text_body">
+                                                <p>운동하는 것 이외에 일상생활의 식습관같은 사소한 부분까지 챙겨주셔서 정말 제대로 운동하는 …</p>
+                                            </div>
+                                            <ul className="infor_text_slide">
+                                                <li className="name_text">홍길동</li>
+                                                <li className="show_star start_coach">
+                                                    <ul>
+                                                        <li className="star start_active"></li>
+                                                        <li className="star start_active"></li>
+                                                        <li className="star start_active"></li>
+                                                        <li className="star "></li>
+                                                        <li className="star"></li>
+                                                    </ul>
                                                 </li>
                                             </ul>
                                         </div>
@@ -209,98 +329,28 @@ class Index extends Component {
                                             <ul className="infor_text_slide">
                                                 <li className="name_text">홍길동</li>
                                                 <li className="show_star">
-                                                    <span className="star_show star_show_ena ">1</span>
-                                                    <span className="star_show star_show_ena ">2</span>
-                                                    <span className="star_show star_show_ena ">3</span>
-                                                    <span className="star_show star_show_ena ">4</span>
-                                                    <span className="star_show star_show_dis ">5</span>
+                                                    <ul>
+                                                        <li className="star start_active"></li>
+                                                        <li className="star start_active"></li>
+                                                        <li className="star start_active"></li>
+                                                        <li className="star "></li>
+                                                        <li className="star"></li>
+                                                    </ul>
                                                 </li>
                                             </ul>
                                         </div>
                                     </div>
                                 </div>{/* item */}
-                                <div className="item">
-                                    <div className="body_item">
-                                        <div className="thumb_item_slide">
-                                            <img src={process.env.PUBLIC_URL + '/img/slide_news/slide_new_01.jpg'} alt="" />
-                                            <div className="overlay_img"></div>
-                                            <div className="text_heading"><a href="#">위코치 코치</a></div>
-                                        </div>
-                                        <div className="body_item_slide">
-                                            <div className="text_body">
-                                                <p>친절히 잘 가르쳐 주셔서 실력이 업그레이드 됬습니다.</p>
-                                            </div>
-                                            <ul className="infor_text_slide">
-                                                <li className="name_text">홍길동</li>
-                                                <li className="show_star">
-                                                    <span className="star_show star_show_ena ">1</span>
-                                                    <span className="star_show star_show_ena ">2</span>
-                                                    <span className="star_show star_show_ena ">3</span>
-                                                    <span className="star_show star_show_ena ">4</span>
-                                                    <span className="star_show star_show_dis ">5</span>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>{/* item */}
-                                <div className="item">
-                                    <div className="body_item">
-                                        <div className="thumb_item_slide">
-                                            <img src={process.env.PUBLIC_URL + '/img/slide_news/slide_new_02.jpg'} alt="" />
-                                            <div className="overlay_img"></div>
-                                            <div className="text_heading"><a href="#">위코치 코치</a></div>
-                                        </div>
-                                        <div className="body_item_slide">
-                                            <div className="text_body">
-                                                <p>운동하는 것 이외에 일상생활의 식습관같은 사소한 부분까지 챙겨주셔서 정말 제대로 운동하는 …</p>
-                                            </div>
-                                            <ul className="infor_text_slide">
-                                                <li className="name_text">홍길동</li>
-                                                <li className="show_star">
-                                                    <span className="star_show star_show_ena ">1</span>
-                                                    <span className="star_show star_show_ena ">2</span>
-                                                    <span className="star_show star_show_ena ">3</span>
-                                                    <span className="star_show star_show_ena ">4</span>
-                                                    <span className="star_show star_show_dis ">5</span>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>{/* item */}
-                                <div className="item">
-                                    <div className="body_item">
-                                        <div className="thumb_item_slide">
-                                            <img src={process.env.PUBLIC_URL + '/img/slide_news/slide_new_03.jpg'} alt="" />
-                                            <div className="overlay_img"></div>
-                                            <div className="text_heading"><a href="#">위코치 코치</a></div>
-                                        </div>
-                                        <div className="body_item_slide">
-                                            <div className="text_body">
-                                                <p>친절히 잘 가르쳐 주셔서 실력이 업그레이드 됬습니다.</p>
-                                            </div>
-                                            <ul className="infor_text_slide">
-                                                <li className="name_text">홍길동</li>
-                                                <li className="show_star">
-                                                    <span className="star_show star_show_ena ">1</span>
-                                                    <span className="star_show star_show_ena ">2</span>
-                                                    <span className="star_show star_show_ena ">3</span>
-                                                    <span className="star_show star_show_ena ">4</span>
-                                                    <span className="star_show star_show_dis ">5</span>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>{/* item */}
-                            </div>
+                            </Slider>
                         </div>
                     </div>
                 </section>{/* main_section_3 */}
                 <section className="main_section_4" id="main_section_4" data-fade={this.state.att_class_ss4}>
                     <div className="gb_section"></div>
                     <div className="main_ss_4 indez_top">
-                        <h2 className="heading_title" data-an="fade-up">
-                            SIMPLE, SAFE AND SECURE
-                        </h2>
+                        <div className="heading_top" data-an="fade-up">
+                            <h2>간단하고 안전하며 보증된 서비스</h2>
+                        </div>
                         <div className="box_item_ss4">
                             <div className="item_ss4">
                                 <figure className="img_ss4" data-an="fade-up">

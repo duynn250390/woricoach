@@ -27,7 +27,7 @@ class Header extends Component {
                     <div className="ovelay_menu"></div>
                     <div className="main_logo">
                         <Link to={'/'} className="show_logo" ><img src={process.env.PUBLIC_URL + '/img/logo_wecoach.png'} alt="We Coach" /></Link>
-                        <Link to={'/'} className="hide_logo" ><img src={process.env.PUBLIC_URL + '/img/logo_wecoach_g.png'} alt="We Coach" /></Link>
+                        {/* <Link to={'/'} className="hide_logo" ><img src={process.env.PUBLIC_URL + '/img/logo_wecoach_g.png'} alt="We Coach" /></Link> */}
                     </div>
                     <div className="main_menu">
                         <ul>

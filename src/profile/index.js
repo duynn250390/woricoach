@@ -35,7 +35,9 @@ class index extends Component {
                     <div className="gb_section"></div>
                 </section>
                 <section className="content_go_header content">
+
                     <div className="col_box_sum container_dis">
+                        <div className="heading_top_profile">코치 프로필</div>
                         <div className="col_box_child col_box_left">
                             <div className="box_full">
                                 <div className="box_infor_coach_top">
@@ -52,11 +54,11 @@ class index extends Component {
                                             <div className="item">종목 :<span className="bold"> 야구</span></div>
                                             <div className="item">평점 :
                                             <ul className="star_list">
-                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                                    <li><i class="fa fa-star-o" aria-hidden="true"></i></li>
+                                                    <li><i className="fa fa-star" aria-hidden="true"></i></li>
+                                                    <li><i className="fa fa-star" aria-hidden="true"></i></li>
+                                                    <li><i className="fa fa-star" aria-hidden="true"></i></li>
+                                                    <li><i className="fa fa-star" aria-hidden="true"></i></li>
+                                                    <li><i className="fa fa-star-o" aria-hidden="true"></i></li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -216,7 +218,7 @@ class index extends Component {
                                     </div>
                                     <div className="portfolio_wrapper gallery">
                                         <div className="element_grid wori">
-                                            <div class="static gallery_type  ">
+                                            <div className="static gallery_type  ">
                                                 <Link to="/" className="gallery_archi">
                                                     <img className="preview" src="https://themegoods-cdn-pzbycso8wng.stackpathdns.com/photography/demo1/wp-content/uploads/2013/06/photo-1438109491414-7198515b166b-705x529.jpg" alt="Adventure Photography" />
                                                 </Link>
@@ -224,14 +226,14 @@ class index extends Component {
                                             </div>
                                         </div>
                                         <div className="element_grid wori">
-                                            <div class="static gallery_type  ">
+                                            <div className="static gallery_type  ">
                                                 <Link to="" className="gallery_archi">
                                                     <img className="preview" src="https://themegoods-cdn-pzbycso8wng.stackpathdns.com/photography/demo1/wp-content/uploads/2015/06/one-scene-705x529.jpg" alt="Adventure Photography" />
                                                 </Link>
                                             </div>
                                         </div>
                                         <div className="element_grid wori">
-                                            <div class="static gallery_type  ">
+                                            <div className="static gallery_type  ">
                                                 <Link to="" className="gallery_archi">
                                                     <img className="preview" src="https://themegoods-cdn-pzbycso8wng.stackpathdns.com/photography/demo1/wp-content/uploads/2011/06/pexels-photo-1-705x529.jpeg" alt="Adventure Photography" />
                                                 </Link>
@@ -239,21 +241,21 @@ class index extends Component {
                                             </div>
                                         </div>
                                         <div className="element_grid wori">
-                                            <div class="static gallery_type  ">
+                                            <div className="static gallery_type  ">
                                                 <Link to="" className="gallery_archi">
                                                     <img className="preview" src="https://themegoods-cdn-pzbycso8wng.stackpathdns.com/photography/demo1/wp-content/uploads/2011/06/350d4ecf94ade25037dbc082e9fbe0d7-705x529.jpg" alt="Adventure Photography" />
                                                 </Link>
                                             </div>
                                         </div>
                                         <div className="element_grid wori">
-                                            <div class="static gallery_type  ">
+                                            <div className="static gallery_type  ">
                                                 <Link to="" className="gallery_archi">
                                                     <img className="preview" src="https://themegoods-cdn-pzbycso8wng.stackpathdns.com/photography/demo1/wp-content/uploads/2015/06/photo-1418225043143-90858d2301b4-705x529.jpg" alt="Adventure Photography" />
                                                 </Link>
                                             </div>
                                         </div>
                                         <div className="element_grid wori">
-                                            <div class="static gallery_type static ">
+                                            <div className="static gallery_type static ">
                                                 <Link to="" className="gallery_archi">
                                                     <img className="preview" src="https://themegoods-cdn-pzbycso8wng.stackpathdns.com/photography/demo1/wp-content/uploads/2015/06/camera-photography-vintage-photo-705x529.jpg" alt="Adventure Photography" />
                                                 </Link>
@@ -269,9 +271,146 @@ class index extends Component {
                         </div>{/* col_box_left */}
                         <div className="col_box_child col_box_right">
                             <div className="box_full">
-                                Hello
+                                <div className="box_sum_sidebar sidebar_top">
+                                    <h2 className="text_top">코치에게 궁금하게 있으신가요?</h2>
+                                    <Link to="#" className="btn">코치에게 쪽지보내기</Link>
+                                </div>{/* box_sum_sidebar */}
+                                <div className="box_sum_sidebar maps">
+                                    <div className="heading_box_title">강습장소</div>
+                                    <div className="body_box_sider">
+                                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4837.270297907536!2d108.22006881542536!3d16.072032243630435!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3142183104bcbfd5%3A0x5ac91edd13470073!2sStudio+Video+T%C3%A2m+Li%C3%AAn!5e1!3m2!1svi!2s!4v1559705546956!5m2!1svi!2s" frameBorder={0} style={{ border: 0 }} allowFullScreen />
+                                        <p>주소 : 경기도 부천시 </p>
+                                    </div>
+                                </div>{/* box_sum_sidebar */}
+                                <div className="box_sum_sidebar">
+                                    <div className="body_box_sider box_color">
+                                        원하시는 장소가 따로 있으면 <br />
+                                        변경 가능합니다.<br />
+                                        이동가능 거리 : 5~10Km
+                                    </div>
+                                </div>{/* box_sum_sidebar */}
+                                <div className="box_sum_sidebar wori_gua">
+                                    <div className="heading_box_title">
+                                        WooriCoach <br />Guarantee
+                                    </div>
+                                    <div className="body_box_sider box_list">
+                                        <ul>
+                                            <li>모든 코치에 대한 성차별 여부 모니터링 및 차단</li>
+                                            <li>100% 환불정책</li>
+                                            <li>질과 양이 다른 트레이닝</li>
+                                            <li>현금이 필요없는 쉬운 결제서비스</li>
+                                            <li>에스크로 안심결제 보장</li>
+                                            <li>스케쥴 가이드 및 일정 알림 서비스</li>
+                                        </ul>
+                                        <div className="btn">
+                                            <Link to="#" className="btn_act">자세히 보기</Link>
+                                        </div>
+                                    </div>
+                                </div>{/* box_sum_sidebar */}
+                                <div className="box_sum_sidebar wori_gua">
+                                    <div className="body_box_sider contact_box">
+                                        <h2 className="heading">Contact Us</h2>
+                                        <ul className="contact_info">
+                                            <li><i className="fa fa-phone" aria-hidden="true"></i> 02-222-222-222</li>
+                                            <li><i className="fa fa-envelope" aria-hidden="true"></i>psyounic.gmail.com</li>
+                                        </ul>
+                                    </div>
+                                </div>{/* box_sum_sidebar */}
                             </div>
                         </div>{/* col_box_right */}
+                    </div>
+                </section>
+                <section className="module_end_profi">
+                    <div className="container_dis">
+                        <div className="heading_tit">
+                            <h2 className="title no_coach">리뷰</h2>
+                        </div>
+                        <div className="box_sumprofi">
+                            <div className="box_item">
+                                <div className="box_comment active">
+                                    <div className="content_commet">
+                                        친절히 잘 가르쳐 주셔서 실력이 업그레이드 됬습니다.
+                                    </div>
+                                </div>
+                                <div className="box_comment_auth">
+                                    <div className="thumb_auth">
+                                        <img src="https://themegoods-cdn-pzbycso8wng.stackpathdns.com/photography/demo1/wp-content/uploads/2015/06/photo-1418225043143-90858d2301b4-705x529.jpg" alt="" />
+                                    </div>
+                                    <div className="info_auth_comment">
+                                        <div className="start_coach">
+                                            <ul>
+                                                <li className="star start_active"></li>
+                                                <li className="star start_active"></li>
+                                                <li className="star start_active"></li>
+                                                <li className="star "></li>
+                                                <li className="star"></li>
+                                            </ul>
+                                        </div>
+                                        <div className="name_coach">
+                                            홍길동
+                                        </div>
+                                        <div className="data_coach">2019.03.05</div>
+                                    </div>
+                                </div>
+                            </div>{/* box_item */}
+                            <div className="box_item">
+                                <div className="box_comment ">
+                                    <div className="content_commet">
+                                        친절히 잘 가르쳐 주셔서 실력이 업그레이드 됬습니다.
+                                    </div>
+                                </div>
+                                <div className="box_comment_auth">
+                                    <div className="thumb_auth">
+                                        <img src="https://themegoods-cdn-pzbycso8wng.stackpathdns.com/photography/demo1/wp-content/uploads/2015/06/camera-photography-vintage-photo-705x529.jpg" alt="" />
+                                    </div>
+                                    <div className="info_auth_comment">
+                                        <div className="start_coach">
+                                            <ul>
+                                                <li className="star start_active"></li>
+                                                <li className="star start_active"></li>
+                                                <li className="star start_active"></li>
+                                                <li className="star start_active"></li>
+                                                <li className="star"></li>
+                                            </ul>
+                                        </div>
+                                        <div className="name_coach">
+                                            홍길동
+                                        </div>
+                                        <div className="data_coach">2019.03.05</div>
+                                    </div>
+                                </div>
+                            </div>{/* box_item */}
+                            <div className="box_item">
+                                <div className="box_comment ">
+                                    <div className="content_commet">
+                                        친절히 잘 가르쳐 주셔서 실력이 업그레이드 됬습니다.
+                                    </div>
+                                </div>
+                                <div className="box_comment_auth">
+                                    <div className="thumb_auth">
+                                        <img src="https://themegoods-cdn-pzbycso8wng.stackpathdns.com/photography/demo1/wp-content/uploads/2011/06/pexels-photo-1-705x529.jpeg" alt="" />
+                                    </div>
+                                    <div className="info_auth_comment">
+                                        <div className="start_coach">
+                                            <ul>
+                                                <li className="star start_active"></li>
+                                                <li className="star start_active"></li>
+                                                <li className="star start_active"></li>
+                                                <li className="star start_active"></li>
+                                                <li className="star"></li>
+                                            </ul>
+                                        </div>
+                                        <div className="name_coach">
+                                            홍길동
+                                        </div>
+                                        <div className="data_coach">2019.03.05</div>
+                                    </div>
+                                </div>
+                            </div>{/* box_item */}
+                        </div>
+                        <div className="bnt_coach">
+                            <Link to="#" className="btn_bg"> …더보기</Link>
+                        </div>
                     </div>
                 </section>
                 <Footer />

@@ -34,7 +34,7 @@ class Footer extends Component {
                             </div>
                             <div className="box_item_ss5">
                                 <div className="heading_title">
-                                    <img src={process.env.PUBLIC_URL + '/img/sli_WooriCoach.png'} alt="logo" />
+                                    <img src={process.env.PUBLIC_URL + '/img/logo_wecoach_footer.png'} alt="logo" />
                                 </div>
                                 <div className="body_item_ss5">
                                     <ul className="link_n">
