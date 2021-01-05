@@ -5,7 +5,7 @@
   "dependencies": {
     "@types/react": "^16.8.19",
     "awesome-phonenumber": "^2.10.0",
-    "axios": "^0.18.0",
+    "axios": "^0.21.1",
     "bootstrap": "^4.3.1",
     "cors": "^2.8.5",
     "draft-js": "^0.10.5",
